@@ -1,0 +1,44 @@
+/* #CSS
+---------------------------------
+    #HTML5 
+    #BODY
+        #TYPOGRPHY 
+    #HELPERS 
+    #IMAGES 
+    #BUTTONS 
+    #SITE STRUCTURE 
+        #HEADER 
+            #SITE-BRANDING (LOGO)
+            #SITE NAVIGATION 
+        #FOOTER 
+        #SECTIONS 
+            #HERO 
+    #LAYOUT 
+        #GRIDS 
+    #EFFECTS (FADE-INS)
+---------------------------------- */
+
+/* #TYPOGRPHY */
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    color: rgba(0,0,0,.7);
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1em;
+    font-size: 87.5%;
+    line-height: 1.5em;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+/*LINKS*/
+a {
+    color: rgba(0,0,0,.4);
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgba(0,0,0,.6);
+}
