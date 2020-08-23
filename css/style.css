@@ -42,3 +42,58 @@ a {
 a:hover {
     color: rgba(0,0,0,.6);
 }
+
+/*HELPERS*/
+.text-centered {
+    text-align: center;
+}
+
+/* #IMAGES */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* SITE-STRUCTRE*/
+
+.site-header,
+.site-footer {
+    text-align: center;
+    padding: 3em 0 2em 0;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+}
+
+.site-identity h1 {
+    font-size: 2em;
+    margin: 0;
+    font-weight: normal;
+}
+
+.site-navigation ul {
+    margin: 0;
+    padding: 2em 0;
+}
+
+.site-navigation li {
+    margin: 0 .5em;
+    padding: 0;
+    display: inline-block;
+
+}
+
+.site-navigation a {
+    display: block;
+    padding: 1em .5em;
+    color: rgba(0,0,0,.4);
+}
+
+.site-navigation a:hover,
+.site-navigation a.selected {
+    color: rgba(0,0,0,.6);
+    border-bottom: 0.05em solid rgba(0,0,0,.2);
+}
+
+section {
+    padding: 0 0 3em 0;
+}
