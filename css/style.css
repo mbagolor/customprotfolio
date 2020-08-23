@@ -97,3 +97,34 @@ img {
 section {
     padding: 0 0 3em 0;
 }
+
+/* #LAYOUT: THUMB IMAGE GRID */
+.thumbgrid {
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.thumbgrid li {
+    list-style: none;
+    width: 49.5%;
+    padding-bottom: 0.4%;
+}
+
+@media (min-width: 768px) {
+    .thumbgrid li {
+        width: 24.5%;
+    }
+}
+
+.thumbgrid a img {
+    filter: brightness(1.05);
+    transition: all ease-in-out 0.2s;
+    border: 1xp solid rgba (255, 255, 255, 0)
+}
+
+.thumbgrid a:hover img {
+    filter: brightness(1);
+    border: 1xp solid rgba(0,0,0,.3);
+}
