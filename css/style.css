@@ -3,9 +3,12 @@
     #HTML5 
     #BODY
         #TYPOGRPHY 
-    #HELPERS 
-    #IMAGES 
-    #BUTTONS 
+        #HELPERS 
+        #MEDIA
+            #IMAGES 
+            #VIDEOS
+        #COMPONENTS
+            #BUTTONS 
     #SITE STRUCTURE 
         #HEADER 
             #SITE-BRANDING (LOGO)
@@ -17,6 +20,11 @@
         #GRIDS 
     #EFFECTS (FADE-INS)
 ---------------------------------- */
+/* #HTML5 */
+header, section, footer, aside, nav, main, article, figure {
+    display: block;
+  }  
+
 
 /* #TYPOGRPHY */
 body {
@@ -48,13 +56,58 @@ a:hover {
     text-align: center;
 }
 
+.text-centered p,
+.mywufooform{
+    max-width: 30em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.subheader {
+    color: rgba(0,0,0,.5);
+    font-weight: normal;
+}
+
+.full-width {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+  }
+  
+  .full-width img {
+    width: 100%;
+  }
+
 /* #IMAGES */
 img {
     max-width: 100%;
     height: auto;
 }
 
-/* SITE-STRUCTRE*/
+img.circular {
+    border-radius: 100%;
+}
+
+/* BUTTONS */
+a.button {
+    display: inline-block;
+    background-color: rgba(0,0,0,.3);
+    color: rgba(255,255,255,.8);
+    border-radius: .5em;
+    padding: 1em 2em .8em 2em;
+    margin: .5em;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-size: .9em;
+}
+a.button:hover {
+    background-color: rgba(0,0,0,.5);
+}
+
+/* SITE-STRUCTURE */
 
 .site-header,
 .site-footer {
@@ -64,7 +117,7 @@ img {
     letter-spacing: 0.15em;
 }
 
-.site-identity h1 {
+.site-branding h1 {
     font-size: 2em;
     margin: 0;
     font-weight: normal;
@@ -79,7 +132,6 @@ img {
     margin: 0 .5em;
     padding: 0;
     display: inline-block;
-
 }
 
 .site-navigation a {
@@ -98,22 +150,44 @@ section {
     padding: 0 0 3em 0;
 }
 
-/* #LAYOUT: THUMB IMAGE GRID */
+.hero {
+    padding: 4em 0;
+    background: #dedede;
+    margin-bottom: 6em;
+}
+
+
+/* FLEX GRID */
+
+@media (min-width: 768px) {
+    
+    .row {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 1em;
+    }
+    .one-third.column {
+        width: 32%;
+    }
+    .two-thirds.column {
+        width: 60%;
+    }
+    
+}
+
+/* #THUMBGRID */
 .thumbgrid {
-    padding: 0;
     display: flex;
-    flex-wrap: wrap;
+	flex-wrap: wrap;
     justify-content: space-between;
 }
 
-.thumbgrid li {
-    list-style: none;
+.thumbgrid a {
     width: 49.5%;
-    padding-bottom: 0.4%;
 }
 
-@media (min-width: 768px) {
-    .thumbgrid li {
+@media (min-width:768px) {
+    .thumbgrid a {
         width: 24.5%;
     }
 }
@@ -121,10 +195,74 @@ section {
 .thumbgrid a img {
     filter: brightness(1.05);
     transition: all ease-in-out 0.2s;
-    border: 1xp solid rgba (255, 255, 255, 0)
+    border: 1px solid rgba(255,255,255,0);
 }
 
 .thumbgrid a:hover img {
     filter: brightness(1);
-    border: 1xp solid rgba(0,0,0,.3);
+    border: 1px solid rgba(0,0,0,.3);
+}
+
+/* Page Fade-ins */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+main,
+fade-in {
+  opacity: 0;
+  animation: fade-in ease-in-out 1;
+  animation-fill-mode: forwards;
+  animation-duration: 0.5s;
+}
+
+@keyframes fade-and-move-in {
+  from {
+    transform: translate(0, -20px);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+.fade-and-move-in * {
+  opacity: 0;
+  animation: fade-and-move-in ease-out 1;
+  animation-fill-mode: forwards;
+  animation-duration: 0.5s;
+}
+
+.fade-and-move-in *:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.fade-and-move-in *:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.fade-and-move-in *:nth-child(3) {
+  animation-delay: 0.4s;
+}
+.fade-and-move-in *:nth-child(4) {
+  animation-delay: 0.7s;
+}
+.fade-and-move-in *:nth-child(5) {
+  animation-delay: 1s;
+}
+.fade-and-move-in *:nth-child(6) {
+  animation-delay: 1.2s;
+}
+.fade-and-move-in *:nth-child(7) {
+  animation-delay: 1.4s;
+}
+.fade-and-move-in *:nth-child(8) {
+  animation-delay: 1.6s;
+}
+.fade-and-move-in *:nth-child(9) {
+  animation-delay: 1.8s;
 }
