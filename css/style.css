@@ -94,8 +94,8 @@ img.circular {
 /* BUTTONS */
 a.button {
     display: inline-block;
-    background-color: rgba(0,0,0,.3);
-    color: rgba(255,255,255,.8);
+    background-color: rgba(235, 44, 44, 0.3);
+    color: rgb(255, 255, 255);
     border-radius: .5em;
     padding: 1em 2em .8em 2em;
     margin: .5em;
